@@ -490,16 +490,51 @@
     font-weight: 700;
   }
 
+  /* ── DOWNLOADS ── */
+  .download-section {
+    background: var(--sand);
+    padding: 56px 32px;
+    text-align: center;
+  }
+  .download-inner { max-width: 920px; margin: 0 auto; }
+  .download-section .section-label { color: var(--green-light); margin-bottom: 10px; }
+  .download-section h2 { color: var(--green-deep); margin-bottom: 8px; }
+  .download-section .dl-sub { font-size: 15px; color: var(--text-muted); line-height: 1.6; margin-bottom: 30px; }
+  .dl-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .dl-btn {
+    display: inline-flex; align-items: center; gap: 14px;
+    flex: 1 1 240px; max-width: 300px;
+    background: var(--green-deep); color: #fff;
+    text-decoration: none; border-radius: 16px;
+    padding: 16px 22px;
+    text-align: left; transition: transform .15s ease, box-shadow .15s ease;
+    box-shadow: 0 6px 20px rgba(13,59,33,0.18);
+  }
+  .dl-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(13,59,33,0.28); }
+  .dl-btn.accent { background: var(--yellow); color: var(--green-deep); }
+  .dl-btn .dl-ic {
+    width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center; font-size: 22px;
+    background: rgba(255,255,255,0.12);
+  }
+  .dl-btn.accent .dl-ic { background: rgba(13,59,33,0.12); }
+  .dl-btn .dl-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.8; }
+  .dl-btn .dl-title { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 700; line-height: 1.2; }
+
   /* ── FOOTER ── */
   footer {
     background: #080f0b;
-    color: rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.4);
     text-align: center;
-    padding: 28px 32px;
-    font-size: 12px;
-    letter-spacing: 0.5px;
+    padding: 32px 32px;
+    line-height: 1.6;
   }
-  footer strong { color: rgba(255,255,255,0.6); }
+  footer .f-usp { color: #fff; font-weight: 700; font-size: 15px; letter-spacing: 2px; }
+  footer .f-course { color: var(--green-pale); font-weight: 500; font-size: 12px; letter-spacing: 1.5px; margin-top: 4px; }
+  footer .f-author { color: rgba(255,255,255,0.6); font-size: 13px; margin-top: 10px; }
+  footer .f-author a { color: var(--yellow); text-decoration: none; font-weight: 600; }
+  footer .f-author a:hover { text-decoration: underline; }
+  footer .f-legal { color: rgba(255,255,255,0.3); font-size: 11px; letter-spacing: 0.4px; margin-top: 12px; }
 
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
@@ -793,9 +828,43 @@
   </div>
 </div>
 
+<!-- ══════════ DOWNLOADS ══════════ -->
+<div class="download-section">
+  <div class="download-inner">
+    <div class="section-label">Materiais para download</div>
+    <h2>Leve o conteúdo com você</h2>
+    <p class="dl-sub">Baixe o trabalho completo, a apresentação e o folheto resumido para compartilhar, imprimir ou usar em sala de aula e em sua empresa.</p>
+    <div class="dl-buttons">
+      <a class="dl-btn accent" href="Reciclagem_Consciente_Apresentacao.pptx" download>
+        <span class="dl-ic">📊</span>
+        <span>
+          <span class="dl-label">Baixar · PPTX</span><br>
+          <span class="dl-title">Apresentação completa</span>
+        </span>
+      </a>
+      <a class="dl-btn" href="Reciclagem_Consciente_Folheto.pdf" download>
+        <span class="dl-ic">📄</span>
+        <span>
+          <span class="dl-label">Baixar · PDF</span><br>
+          <span class="dl-title">Folheto de divulgação</span>
+        </span>
+      </a>
+      <a class="dl-btn" href="Reciclagem_Consciente_Economia_Circular.docx" download>
+        <span class="dl-ic">📝</span>
+        <span>
+          <span class="dl-label">Baixar · DOCX</span><br>
+          <span class="dl-title">Trabalho completo</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
 <footer>
-  <strong>Reciclagem Consciente & Economia Circular</strong> — Material de Divulgação | Administração &amp; Sustentabilidade<br>
-  Baseado na PNRS (Lei 12.305/2010) · Resolução CONAMA 275/2001 · Ellen MacArthur Foundation · IPEA 2013
+  <div class="f-usp">UNIVERSIDADE DE SÃO PAULO</div>
+  <div class="f-course">ADMINISTRAÇÃO · ATIVIDADE DE EXTENSÃO I</div>
+  <div class="f-author">Julio Cesar Modanez Silva — 2603437&nbsp;&nbsp;·&nbsp;&nbsp;página web: <a href="https://juliomodanez.github.io/reciclagem-consciente/">juliomodanez.github.io/reciclagem-consciente</a></div>
+  <div class="f-legal">Baseado na PNRS (Lei 12.305/2010) · Resolução CONAMA 275/2001 · Ellen MacArthur Foundation · IPEA 2013</div>
 </footer>
 
 </body>
